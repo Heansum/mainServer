@@ -13,7 +13,7 @@ import dao.MemberService;
 import dto.MemberUpdateInfo;
 import exception.EmptyMemberInfoException;
 import exception.NotFoundMemberInfoException;
-import exception.OverflowMeberInfoException;
+import exception.OverflowMemberInfoException;
 
 /**
  * Servlet implementation class Update
@@ -44,7 +44,7 @@ public class Update extends HttpServlet {
 			} else {
 				response.setStatus(400);
 			}
-		} catch (EmptyMemberInfoException | OverflowMeberInfoException e) {
+		} catch (EmptyMemberInfoException | OverflowMemberInfoException e) {
 			response.setStatus(400);
 		} catch(NotFoundMemberInfoException e) {
 			response.setStatus(404);

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.MemberService;
 import dto.MemberInfo;
 import exception.EmptyMemberInfoException;
-import exception.OverflowMeberInfoException;
+import exception.OverflowMemberInfoException;
 
 /**
  * Servlet implementation class Join
@@ -46,7 +46,7 @@ public class Join extends HttpServlet {
 				// 회원가입이 되지 않았다면(아이디가 중복)
 				response.setStatus(400);
 			}
-		} catch(EmptyMemberInfoException | OverflowMeberInfoException e) {
+		} catch(EmptyMemberInfoException | OverflowMemberInfoException e) {
 			response.setStatus(400);
 		} catch(SQLException e) {
 			// 서버 문제

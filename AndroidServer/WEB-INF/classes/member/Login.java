@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.MemberService;
 import dto.MemberInfo;
 import exception.EmptyMemberInfoException;
-import exception.OverflowMeberInfoException;
+import exception.OverflowMemberInfoException;
 
 /**
  * Servlet implementation class Login
@@ -47,7 +47,7 @@ public class Login extends HttpServlet {
 				// 로그인 실패
 				response.setStatus(404);
 			}
-		} catch(EmptyMemberInfoException | OverflowMeberInfoException e) {
+		} catch(EmptyMemberInfoException | OverflowMemberInfoException e) {
 			response.setStatus(400);
 		} catch(SQLException e) {
 			response.setStatus(500);
